@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>index.utf8</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="styles.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level2" data-background="#d3d3d3">
+<h2></h2>
+<h2 style="color:#0047AB">
+Phylodynamics of SARS-CoV-2
+</h2>
+<h2 style="color:#000000">
+Simon Frost
+</h2>
+<h3 style="color:#000000">
+Principal Data Scientist, Microsoft Health Futures
+</h3>
+<h3 style="color:#000000">
+Professor of Pathogen Dynamics, LSHTM
+</h3>
+<p><br></p>
+<p><img height="100px" style="border:0px;margin: 0px 20px;" src="img/Microsoft.png"> <img height="100px" style="border:0px;margin: 0px 20px;" src="img/lshtm.png"></p>
+</section>
+<section id="models-old-and-new" class="slide level2">
+<h2>Models old and new</h2>
+<ul>
+<li>Old
+<ul>
+<li>SIR/SEIR</li>
+</ul></li>
+<li>Not as old
+<ul>
+<li>Stochastic models</li>
+<li>Age structured models</li>
+</ul></li>
+<li>Recent
+<ul>
+<li>Agent-based models</li>
+<li>Network models</li>
+</ul></li>
+<li>New
+<ul>
+<li>Phylodynamic models</li>
+</ul></li>
+</ul>
+</section>
+<section id="phylodynamics" class="slide level2">
+<h2>Phylodynamics</h2>
+<ul>
+<li>Models that <em>integrate</em> evolutionary models with…
+<ul>
+<li>Epidemiology</li>
+<li>Immunology</li>
+<li>Ecology</li>
+</ul></li>
+<li>Different data streams can complement and enhance each other</li>
+<li>Villabona-Arenas, Hanage and Tully (2020) argue that phylogenetic data <em>should</em> be integrated with other sources</li>
+</ul>
+</section>
+<section id="sequence-data" class="slide level2">
+<h2>Sequence data</h2>
+<ul>
+<li>Why include sequence data?
+<ul>
+<li>Introduction of cases</li>
+<li>Spatial coupling</li>
+<li>Hidden heterogeneity</li>
+</ul></li>
+<li>Remarkable generation <em>and dissemination</em> of SARS-CoV-2 sequence data
+<ul>
+<li>GISAID: collates data worldwide</li>
+<li>COGUK: COVID-19 Genomics UK Consortium</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p><img data-src="img/gisaid_country.png" style="width:90.0%" /></p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p><img data-src="img/cog_country.png" style="width:90.0%" /></p>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p><img data-src="img/cog_time.png" style="width:90.0%" /></p>
+</section>
+<section id="increased-accessibility" class="slide level2">
+<h2>Increased accessibility</h2>
+<ul>
+<li>Not just ability to download sequences</li>
+<li>Post-processed data
+<ul>
+<li>Alignment</li>
+<li>Lineages</li>
+</ul></li>
+<li>Dashboards
+<ul>
+<li>Nextstrain, Microreact, CoV-GLUE</li>
+</ul></li>
+</ul>
+</section>
+<section id="microreact-uk-data" class="slide level2">
+<h2>Microreact: UK data</h2>
+<p><img data-src="img/microreact_uk.png" style="width:90.0%" /></p>
+</section>
+<section id="yet-studies-are-limited" class="slide level2">
+<h2>Yet studies are limited</h2>
+<ul>
+<li>medrXiv/biorXiv:
+<ul>
+<li>‘SEIR and COVID19’: 445 hits</li>
+<li>‘phylodynamics and COVID19’: 26 hits</li>
+</ul></li>
+<li>Until recently, sample sizes of studies were small</li>
+<li>Typically stronger on the phylogenetics than on the modeling</li>
+</ul>
+</section>
+<section id="early-dynamics-n53" class="slide level2">
+<h2>Early dynamics (n=53)</h2>
+<ul>
+<li>SEI(2)R model with (assumed) heterogeneity in infectiousness</li>
+<li><span class="math inline">\(R_0=2.15\)</span> <span class="math inline">\((1.79-2.75)\)</span></li>
+</ul>
+<p><img data-src="img/volz_report5.png" style="width:80.0%" /> <small>Volz et al., Imperial Report 5, 2020-02-15</small></p>
+</section>
+<section id="weifang-outbreak-n20" class="slide level2">
+<h2>Weifang outbreak (n=20)</h2>
+<p><img data-src="img/volz_weifang.png" style="width:55.0%" /></p>
+<p><small>Volz et al., medrXiv, 2020-03-19</small></p>
+</section>
+<section id="li-and-ayscue-multiple-locations-n1113" class="slide level2">
+<h2>Li and Ayscue: multiple locations (n=1,113)</h2>
+<ul>
+<li>Joint estimation using cases and phylogeny
+<ul>
+<li>Methodology of Li, Grassly, and Fraser, assuming a branching process with time-varying parameters</li>
+</ul></li>
+<li>Estimated undercount of cases as well as heterogeneity in cases</li>
+</ul>
+<p><img data-src="img/li.png" style="width:90.0%" /></p>
+<p><small>Li and Ayscue, medrXiv, 2020-05-09</small></p>
+</section>
+<section id="australian-epidemic-n903" class="slide level2">
+<h2>Australian epidemic (n=903)</h2>
+<ul>
+<li>Assume two regimes of <span class="math inline">\(R\)</span> and fitted timing and magnitude using a birth-death process</li>
+</ul>
+<p><img data-src="img/seemann.png" style="width:60.0%" /></p>
+<p><small>Seemann et al., medrXiv, 2020-05-16</small></p>
+</section>
+<section id="problems" class="slide level2">
+<h2>Problems</h2>
+<ul>
+<li>With few exceptions, studies that use SARS-CoV-2 sequence data are more ‘phylo’ and less ‘dynamics’</li>
+<li>Datasets are large and expanding rapidly
+<ul>
+<li>Allows us to fit more complex models…</li>
+<li>Computationally expensive</li>
+</ul></li>
+</ul>
+</section>
+<section id="solutions" class="slide level2">
+<h2>Solutions?</h2>
+<ul>
+<li>Long term:
+<ul>
+<li>Focus on scalable inference</li>
+</ul></li>
+<li>Short term:
+<ol type="1">
+<li>Look at smaller e.g. subnational epidemics</li>
+<li>Generate predicted phylogenies from existing models</li>
+</ol></li>
+</ul>
+</section>
+<section id="smaller-epidemics" class="slide level2">
+<h2>1. Smaller epidemics</h2>
+<ul>
+<li>Analyses of datasets in the low 1000s is possible with current frameworks
+<ul>
+<li>Scotland</li>
+<li>Wales</li>
+</ul></li>
+</ul>
+</section>
+<section id="microreact-scotland-data" class="slide level2">
+<h2>Microreact: Scotland data</h2>
+<p><img data-src="img/microreact_scotland.png" style="width:90.0%" /></p>
+</section>
+<section id="microreact-wales-data" class="slide level2">
+<h2>Microreact: Wales data</h2>
+<p><img data-src="img/microreact_wales.png" style="width:90.0%" /></p>
+</section>
+<section id="generating-predicted-phylogenies" class="slide level2">
+<h2>2. Generating predicted phylogenies</h2>
+<ul>
+<li>Algorithms and tools exist <em>today</em> to take epidemiological models and output phylogenies
+<ul>
+<li>ODE models: phydynR (Volz)</li>
+<li>Gillespie-type models: MASTER (Vaughan)</li>
+<li>Agent-based models:
+<ul>
+<li>VirusTreeSimulator (Hall)</li>
+<li>treesampler (Kosakovsky Pond)</li>
+</ul></li>
+</ul></li>
+<li>A requirement is that we need to understand the link between state changes in an epidemiological model and the phylogeny</li>
+</ul>
+</section>
+<section id="an-analogy-deterministic-vs.-stochastic-models" class="slide level2">
+<h2>An analogy: deterministic vs. stochastic models</h2>
+<ul>
+<li>Consider a birth-death process with birth rate <span class="math inline">\(b\)</span> and death rate <span class="math inline">\(d\)</span></li>
+<li>In a deterministic ODE model, we just have to consider the difference in rates <span class="math inline">\(b-d\)</span></li>
+<li>In a stochastic model, we have to consider both processes</li>
+</ul>
+</section>
+<section id="phylodynamic-vs.-non-phylodynamic-models" class="slide level2">
+<h2>Phylodynamic vs. non-phylodynamic models</h2>
+<ul>
+<li>By defining models in terms of their components, we can easily extend epidemiological models to generate phylogenies
+<ul>
+<li>Transmission results in lineages splitting</li>
+<li>Processes such as movement can result in a change in lineage state</li>
+</ul></li>
+<li>With more work, it is possible to extend them to generate summary statistics of phylogenies
+<ul>
+<li>Clustering, asymmetry etc.</li>
+<li>Frost and Volz (2010,2013)</li>
+</ul></li>
+</ul>
+</section>
+<section id="core-groups-and-phylogeny" class="slide level2">
+<h2>Core groups and phylogeny</h2>
+<p><img data-src="img/propmixing.png" style="width:90.0%" /> <small>Frost and Volz (2013)</small></p>
+</section>
+<section id="deterministic-models-with-phydynr" class="slide level2">
+<h2>Deterministic models with phydynR</h2>
+<pre><code>births &lt;-  c(&#39;parms$beta*S*I&#39;)
+deaths &lt;- c(&#39;(parms$mu+parms$gamma)*I&#39;)
+names(births) &lt;- names(deaths) &lt;- c(&quot;I&quot;)
+nonDemeDynamics &lt;- c(&#39;parms$mu*(S+I+R)-parms$beta*S*I-parms$mu*S&#39;,
+                     &#39;parms$gamma*I-parms$mu*R&#39;)
+names(nonDemeDynamics) &lt;- c(&quot;S&quot;,&quot;R&quot;)</code></pre>
+</section>
+<section id="dynamics-and-trees" class="slide level2">
+<h2>Dynamics and trees</h2>
+<p><img data-src="img/tree.png" style="width:90.0%" /></p>
+</section>
+<section id="stochastic-models-with-master" class="slide level2">
+<h2>Stochastic models with MASTER</h2>
+<pre><code>&lt;reaction spec=&#39;Reaction&#39; reactionName=&quot;Infection&quot; rate=&quot;0.005&quot;&gt;
+    S + I -&gt; 2I
+&lt;/reaction&gt;
+&lt;lineageSeed spec=&#39;Individual&#39; population=&#39;@I&#39;/&gt;</code></pre>
+</section>
+<section id="agent-based-models" class="slide level2">
+<h2>Agent based models</h2>
+<ul>
+<li>Perhaps the simplest to deal with</li>
+<li>Just need to keep track of
+<ul>
+<li>who infected whom (and when)</li>
+<li>when infected cases die/recover</li>
+</ul></li>
+</ul>
+<pre><code>Ego  Alter  Time
+  1      2   1.0
+  2      3   1.5
+  1     -1   2.1</code></pre>
+</section>
+<section id="moving-between-model-formulations" class="slide level2">
+<h2>Moving between model formulations</h2>
+<ul>
+<li><a href="http://github.com/epirecipes/sir-julia">http://github.com/epirecipes/sir-julia</a> gives many ‘recipes’ for an SIR model
+<ul>
+<li>ODE</li>
+<li>SDE</li>
+<li>Map</li>
+<li>Markov model</li>
+<li>Gillespie-type</li>
+<li>Agent-based model</li>
+<li>(Petri net)</li>
+</ul></li>
+</ul>
+</section>
+<section id="phylogenies-or-lineages" class="slide level2">
+<h2>Phylogenies or lineages?</h2>
+<ul>
+<li>SARS-CoV-2 is not <em>that</em> diverse</li>
+<li>Rambaut et al. have defined a number of lineages
+<ul>
+<li>A, B, B.1, B.1.1 etc.</li>
+</ul></li>
+<li>Do we need the full phylogeny? Or do lineages suffice?</li>
+</ul>
+</section>
+<section id="uk-phylogeny" class="slide level2">
+<h2>UK phylogeny</h2>
+<p><img data-src="img/uktree.png" style="width:80.0%" /></p>
+</section>
+<section id="new-models" class="slide level2">
+<h2>New models?</h2>
+<ul>
+<li>Rather than repurpose existing models, are there new ones we can explore?</li>
+<li>How can we represent genealogies within an epidemiological model?</li>
+<li>In population genetics, Fleming-Viot processes have been developed that have considered e.g. infinite allele models, infinite sites models etc..
+<ul>
+<li>Ethier and Kurtz (1993)</li>
+</ul></li>
+</ul>
+</section>
+<section id="conclusions" class="slide level2">
+<h2>Conclusions</h2>
+<ul>
+<li>The densely sampled COVID19 epidemic in the UK provides challenges and opportunities:
+<ul>
+<li>Methodological development</li>
+<li>Understanding contact structure</li>
+</ul></li>
+<li>Many existing models that can be retrofitted to generate pathogen phylogenies
+<ul>
+<li>Aid to model comparison, as many models may fit the case data equally well</li>
+</ul></li>
+</ul>
+</section>
+<section id="thanks" class="slide level2">
+<h2>Thanks!</h2>
+<p><img height="100px" style="border:0px;margin: 0px 20px;" src="img/Microsoft.png"> <img height="100px" style="border:0px;margin: 0px 20px;" src="img/lshtm.png"></p>
+<h2>
+<span style="font-size:24px"><img height="32px" src="img/windows.png" style="background:none; border:none; box-shadow:none; vertical-align:middle"/>  <a href="mailto:sdwfrost@microsoft.com" target="_blank" style="vertical-align:middle">sdwfrost@microsoft.com</a></span> <span style="font-size:24px"><img height="32px" src="img/twitter-icon.png" style="background:none; border:none; box-shadow:none; vertical-align:middle"/>  <a href="http://www.twitter.com/sdwfrost" target="_blank" style="vertical-align:middle"><span class="citation" data-cites="sdwfrost">@sdwfrost</span></a></span> <span style="font-size:24px"><img src="img/GitHub-Mark-32px.png" style="background:none; border:none; box-shadow:none; vertical-align:middle"/>  <a href="http://github.com/sdwfrost" target="_blank" style="vertical-align:middle">http://github.com/sdwfrost</a></span>
+</h2>
+</section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "index_files/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
